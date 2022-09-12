@@ -22,5 +22,7 @@ level of clearance. To use the program, run it using Python 3
 and enter any of the logins listed above. You will then be prompted with
 a menu of applications to choose from. Your success in gaining "entry" to these
 applications depends on which login was chosen. Either way you will be returned to the menu 
-prompt but the text that follows your option shows that the access functionality
-works. 
+prompt, but you will be given a message showing if you succeeded in gaining entry to the application or not.
+
+* Note: Type casting is used to convert the option chosen
+in the menu prompt into an integer. Any other string input will break it for now.
