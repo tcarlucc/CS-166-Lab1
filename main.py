@@ -7,7 +7,6 @@ import csv
 from user import User
 
 def main():
-
     logins = []
     valid_login = False
 
@@ -17,15 +16,24 @@ def main():
             new_user = User(row[0], row[1], row[2])
             logins.append(new_user)
 
-
+    print("Welcome to Unsecure Company Intranet!")
     while not valid_login:
-        print("Welcome to Unsecure Company Intranet!")
         username = input("Please enter your username to begin:")
         password = input("Please enter your password:")
-        print(new_user)
+
+        for login in logins:
+            if username == login.get_username() and password == login.get_password():
+                temp_user = login
+                valid_login = True
+            else:
+                print("Username or Password incorrect, please try again.")
+
+    active_user = temp_user
+
+    print("Welcome, " + temp_user.get_username() + "!")
 
 
-    pass
+
 
 if __name__ == "__main__":
     main()
