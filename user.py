@@ -13,5 +13,14 @@ class User:
         self.password = password
         self.access = access
 
+    def get_username(self):
+        return self.username
+
+    def get_password(self):
+        return self.password
+
+    def get_access(self):
+        return self.access
+
     def __str__(self):
         return(self.username + " "+ self.password)
